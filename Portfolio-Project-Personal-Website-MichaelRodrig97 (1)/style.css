@@ -1,0 +1,157 @@
+#hero-section
+{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(https://images.unsplash.com/photo-1498736297812-3a08021f206f?q=80&w=2271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover,cover;
+  background-position: center, center;
+  width: 100%;
+  text-align: center;
+
+}
+
+
+
+#mission-section,#contact-section
+{
+
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),linear-gradient(#b10c58, #8a0ebe);
+  background-repeat: no-repeat;
+  background-size: , contain;
+
+}
+
+#skills-section
+{
+  background-color: #0f1113;
+
+}
+
+section
+{
+  overflow: hidden;
+
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+
+#footer-section
+{
+  color: white;
+  padding: 20px;
+  text-align: center;
+  background-color: #1a1d20; 
+  font-style: normal;
+
+}
+
+#tagline 
+{
+  font-style: italic;
+}
+
+
+body
+{
+  position: relative;
+  font-size: 16px;
+  color: white;
+}
+
+
+
+
+img.avatar
+{
+
+  margin-top: 100px;
+}
+
+.header-text
+{
+  color: white;
+  padding:  20px;
+
+}
+
+.display-4
+{
+  font-family: Bevan;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.navbar-nav
+{
+  margin-left: auto;
+}
+
+#hero-target, #mission-target, #skills-target, #contact-target
+{
+  position: relative;
+  top: -50px;
+}
+
+.scroll-top .navbar
+{
+  background-color: transparent !important;
+}
+
+.mission-img
+{
+
+max-width: 100vh;
+max-height: 100vh;
+
+}
+
+i.html5-icon, i.bootstrap-icon, i.ps-icon, i.css-icon
+{
+  font-size: 150px;
+  color: white;
+}
+
+.css-icon
+{
+  height: 150px;
+  padding-bottom: 15px;
+}
+
+.display-2
+{
+  text-align: center;
+  font-family: Bevan;
+  font-weight: 400;
+}
+
+.mission-content
+{
+  text-align: left;
+}
+
+#contact-section i
+{
+  font-size: 100px;
+  color: white;
+
+}
+
+#contact-section i:hover
+{
+  font-size: 100px;
+  color: #b2b2b2;
+
+}
+
+a
+{
+  text-decoration: none;
+}
+
+
+.bi-envelope-fill
+{
+  position: relative;
+top: -25px;
+}
