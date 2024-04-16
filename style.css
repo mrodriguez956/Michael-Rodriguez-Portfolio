@@ -13,7 +13,7 @@
 #mission-section,#contact-section
 {
 
-  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),linear-gradient(#b10c58, #8a0ebe);
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
   background-repeat: no-repeat;
   background-size: , contain;
 
