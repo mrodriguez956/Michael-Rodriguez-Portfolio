@@ -10,7 +10,7 @@
 
 
 
-#mission-section,#contact-section
+#showcase-section,#skills-section
 {
 
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),linear-gradient(#b10c58, #8a0ebe);
@@ -19,7 +19,7 @@
 
 }
 
-#skills-section
+#contact-section,#mission-section
 {
   background-color: #0f1113;
 
