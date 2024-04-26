@@ -10,40 +10,23 @@ function onScroll() {
   }
 }
 
-function toggleAnimation()
-{
-  const containers = document.getElementsByClassName("card");
-  const captionTexts = document.getElementsByClassName("caption-text");
+function toggleAnimation() {
+  const containers = document.querySelectorAll(".card");
 
-  for (let i = 0; i < containers.length; i++)
-  {
-    const container = containers[i];
-    const captionText = captionTexts[i];
+  containers.forEach(container => {
+    const captionText = container.querySelector(".caption-text");
 
-    container.addEventListener("mouseenter", function(event)
-    {
-      if(event.currentTarget === container)
-      {
-        captionText.classList.remove("animate__bounceOut");
-        captionText.classList.add("animate__bounceIn");
-      }
+    container.addEventListener("mouseenter", () => {
+      captionText.classList.remove("animate__bounceOut");
+      captionText.classList.add("animate__bounceIn");
     });
 
-    container.addEventListener("mouseleave", function(event)
-    {
-      if(event.currentTarget === container)
-      {
-        captionText.classList.remove("animate__bounceIn");
-        captionText.classList.add("animate__bounceOut");
-        
-      }
+    container.addEventListener("mouseleave", () => {
+      captionText.classList.remove("animate__bounceIn");
+      captionText.classList.add("animate__bounceOut");
     });
-    
-  }
-
-
+  });
 }
-
 
 window.onload = toggleAnimation();
 

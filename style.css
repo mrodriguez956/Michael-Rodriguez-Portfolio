@@ -169,3 +169,13 @@ top: -25px;
 {
   display: block;
 }
+
+.card-img-overlay:hover
+{
+  background-image: linear-gradient(to bottom,rgba(0,0,0,1),  rgba(255,0,0,0));
+}
+
+.card
+{
+  background-color: black;
+}
