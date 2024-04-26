@@ -160,3 +160,12 @@ a
 top: -25px;
 }
 
+.caption-container .caption-text
+{
+  display: none;
+}
+
+.caption-container:hover .caption-text
+{
+  display: block;
+}
