@@ -179,3 +179,22 @@ top: -25px;
 {
   background-color: black;
 }
+
+.coming-soon
+{
+  background-image: url(img/coming-soon.svg);
+  background-size: cover;
+  display: block;
+  right: 0;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  z-index: 999999;
+  border-top-right-radius: 8px;
+
+}
+
+.cs-parent
+{
+  position: relative;
+}
