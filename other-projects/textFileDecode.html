@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="file" id="fileInput">
+<button id="processButton">Process File</button>
+
+<script>
+
+  const reader = new FileReader();
+  const fileInput = document.getElementById("fileInput");
+  const processButton = document.getElementById("processButton");
+
+  processButton.addEventListener("click", function() {
+  // Get the selected file using fileInput
+  const selectedFile = fileInput.files[0];
+
+  // Check if a file is selected (optional)
+  if (selectedFile) {
+    console.log("file selected, sending to getTextFile!");
+    getTextFile(selectedFile); // Call getTextFile with the selected file
+  } else {
+    alert("No file selected!");
+  }
+});
+
+  function getTextFile(file)
+  {
+    console.log("attempting to run function...")
+    reader.onload = function(e) {
+          const text = e.target.result;
+          console.log(text);
+          decode(text);
+      }
+
+      reader.readAsText(file);
+  }
+
+
+  function decode(messageFile){
+    var wordMap = new Map();
+          var lines = messageFile.split(/\r?\n/);
+
+          lines.forEach(line => {
+              //go through each line and separate the number and word
+              const parts = line.split(/\s+/);
+              const number = parseInt(parts[0]);
+              const word = parts[1];
+
+              //add each number and its corresponding word to wordMap
+              wordMap.set(number, word);
+          });
+
+          const sortedKeys = Array.from(wordMap.keys()).sort((a, b) => a - b);
+
+          console.log(sortedKeys);
+          displayPyramid(sortedKeys, wordMap);
+    
+  }
+
+  function displayPyramid(keys, map) {
+  let rowCount = 1;
+  let index = 0;
+  let maxWidth = 0;
+
+  // Determine the maximum width of the pyramid (width of the last row)
+  while (index < keys.length) {
+    maxWidth += rowCount;
+    index += rowCount;
+    rowCount++;
+  }
+
+  index = 0;
+  rowCount = 1;
+
+  while (index < keys.length) {
+    let row = '';
+    for (let i = 0; i < rowCount && index < keys.length; i++) {
+      row += keys[index] + ' ';
+      index++;
+    }
+    const padding = ' '.repeat((maxWidth - row.trim().length) / 2);
+
+    // Get the word associated with the last number in the row
+    const lastNumber = parseInt(row.trim().split(' ').pop());
+    const associatedWord = map.get(lastNumber);
+
+    console.log(padding + row.trim() + ` ${associatedWord}`);  // Include word in parentheses
+    rowCount++;
+  }
+}
+
+
+</script>
+
+</body>
+</html>
